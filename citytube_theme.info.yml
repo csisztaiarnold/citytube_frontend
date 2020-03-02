@@ -1,0 +1,11 @@
+name: CityTube
+type: theme
+description: 'A theme for the CityTube module.'
+package: custom
+core: 8.x
+libraries:
+  - citytube_theme/global-css
+regions:
+  header: 'Header'
+  content: 'Content'
+  footer: 'Footer'
