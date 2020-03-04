@@ -1,5 +1,13 @@
-<header id="head">This is the header</header>
+<header id="head">
+  <div class="container">
+    <div class="logo-container col-lg-2">
+      <a href="{{ front_page }}" title="{{ 'Home'|t }}" rel="home">
+        <img src="{{ logopath }}" alt="{{ 'Home'|t }}">
+      </a>
+    </div>
+  </div>
+</header>
 
-<div class="container">{{page.content}}</div>
+<div class="container">{{ page.content }}</div>
 
 <div id="footer">This is the footer</div>
