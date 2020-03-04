@@ -18,15 +18,50 @@ article.video-item header {
   height: 200px;
   background-size: cover;
   background-position: center center;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  justify-content: flex-start;
+  align-content: center;
+  align-items: stretch;
+}
+article.video-item header .date {
+  position: absolute;
+  background-color: #fdc93a;
+  font-family: "Roboto Condensed", sans-serif;
+  font-weight: 700;
+  font-size: 16px;
+  padding: 5px;
+  margin-left: 10px;
+  color: #000;
+  text-align: center;
+  line-height: 18px;
+  display: inline-block;
+  box-shadow: 2px 2px 0px 2px rgba(0, 0, 0, 0.5);
+}
+article.video-item header .header-item-top {
+  order: 0;
+  flex: 2 1 auto;
+  align-self: auto;
+}
+article.video-item header .header-item-middle {
+  order: 0;
+  flex: 0 0 auto;
+  align-self: auto;
+}
+article.video-item header .header-item-bottom {
+  order: 0;
+  flex: 2 1 auto;
+  align-self: auto;
 }
 article.video-item header h1 {
-  font-weight: 500;
+  font-weight: 700;
   color: #fff;
-  font-size: 24px;
+  font-size: 22px;
   text-align: center;
-  padding: 20px;
   font-family: "Roboto Condensed", sans-serif;
-  text-shadow: 1px 1px 2px #000;
+  text-shadow: 2px 2px 2px #000;
+  padding: 20px;
 }
 article.video-item header h1 a {
   color: #fff;
@@ -34,13 +69,38 @@ article.video-item header h1 a {
 }
 article.video-item .content {
   height: 170px;
-  background-color: #FDC93A;
-  padding: 20px;
+  background-color: #fdc93a;
   color: #111;
   font-size: 16px;
   font-weight: 400;
   word-wrap: break-word;
   word-break: break-word;
+  position: relative;
+}
+article.video-item .content .description {
+  padding: 20px;
+}
+article.video-item .content .channel, article.video-item .content .city {
+  position: absolute;
+  bottom: 0;
+  background-color: #000;
+  font-family: "Open Sans", sans-serif;
+  text-transform: uppercase;
+  font-weight: 600;
+  font-size: 14px;
+  padding: 2px 10px 2px 10px;
+  text-align: center;
+  display: inline-block;
+}
+article.video-item .content .channel a, article.video-item .content .city a {
+  color: #fdc93a;
+  text-decoration: none;
+}
+article.video-item .content .channel {
+  right: 0;
+}
+article.video-item .content .city {
+  left: 0;
 }
 
 /*# sourceMappingURL=main.css.map */
