@@ -1,3 +1,4 @@
+{% if is_front %}
 <article class="video-item col-lg-4 col-md-6 col-sm-6 col-xs-12">
   <header style="background-image:url('{{ node.field_thumbnail_url.value }}')">
     <div class="date">
@@ -24,3 +25,10 @@
     <div class="description">{{ node.body.value }}</div>
   </div>
 </article>
+{% else %}
+  <iframe width="100%" height="515" src="https://www.youtube.com/embed/{{ node.field_video_id.value }}" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+  <h1>{{ node.title.value }}</h1>
+  <div class="description">
+    {{ node.body.value }}
+  </div>
+{% endif %}
