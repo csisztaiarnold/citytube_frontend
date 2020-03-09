@@ -14,10 +14,8 @@ function citytube_theme_preprocess_page(&$variables)
 function citytube_theme_preprocess(&$variables, $hook)
 {
   try {
-    $variables['is_front'] = \Drupal::service('path.matcher')->isFrontPage();
+    $variables['is_node'] = \Drupal::routeMatch()->getParameter('node');
   } catch (Exception $e) {
-    $variables['is_front'] = FALSE;
+    $variables['is_node'] = FALSE;
   }
-  // Ensure the cache varies correctly (new in Drupal 8.3).
-  $variables['#cache']['contexts'][] = 'url.path.is_front';
 }
