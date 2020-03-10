@@ -1,9 +1,20 @@
 {% if is_node %}
-<iframe width="100%" height="515" src="https://www.youtube.com/embed/{{ node.field_video_id.value }}" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-<h1>{{ node.title.value }}</h1>
-<div class="description">
-  {{ node.body.value }}
-</div>
+<article class="video-node">
+  <h1>{{ node.title.value }}</h1>
+  <div class="channel">
+    <a href="https://www.youtube.com/channel/{{ node.field_channel_id.value }}" title="{{ node.field_channel.value }}">{{ node.field_channel.value }}</a>
+  </div>
+  <div class="city">
+    <a href="{{ path('entity.taxonomy_term.canonical', {'taxonomy_term': node.field_city.target_id }) }}">{{ node.field_city.entity.name.value }}</a>
+  </div>
+  <div class="date">
+    {{ node.field_published.value|date('Y') }}/{{ node.field_published.value|date('m') }}/{{ node.field_published.value|date('d') }} {{ node.field_published.value|date('H') }}:{{ node.field_published.value|date('i') }}
+  </div>
+  <iframe width="100%" height="515" src="https://www.youtube.com/embed/{{ node.field_video_id.value }}" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+  <div class="description">
+    {{ node.body.value }}
+  </div>
+</article>
 {% else %}
 <article class="video-item col-lg-4 col-md-6 col-sm-6 col-xs-12">
   <header style="background-image:url('{{ node.field_thumbnail_url.value }}')">
@@ -23,7 +34,7 @@
   </header>
   <div class="content">
     <div class="channel">
-      <a href="">{{ node.field_channel.value }}</a>
+      <a href="https://www.youtube.com/channel/{{ node.field_channel_id.value }}" title="{{ node.field_channel.value }}">{{ node.field_channel.value }}</a>
     </div>
     <div class="city">
       <a href="{{ path('entity.taxonomy_term.canonical', {'taxonomy_term': node.field_city.target_id }) }}">{{ node.field_city.entity.name.value }}</a>

@@ -120,6 +120,25 @@ article.video-item {
   }
 }
 
+.video-node {
+  h1 {
+    font-size: 32px;
+    background-color: #fdc93a;
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 200;
+    margin: 2px 0 2px 0;
+    padding: 20px;
+  }
+
+  .description {
+    font-size: 16px;
+    color: #333;
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 300;
+    padding: 10px 0 0 0;
+  }
+}
+
 .pager li>a {
   display: inline-block !important;
   padding: 5px 14px !important;
