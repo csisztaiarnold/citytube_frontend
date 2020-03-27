@@ -1,5 +1,6 @@
 import React, {Component} from 'react';
 import CitytubeVideos from './components/citytube_videos';
+const CITYTUBE_VIDEO_POSTS_LIST = process.env.REACT_APP_CITYTUBE_VIDEO_POSTS_LIST;
 
 class App extends Component {
 
@@ -8,7 +9,7 @@ class App extends Component {
   }
 
   componentDidMount() {
-    fetch('')
+    fetch(CITYTUBE_VIDEO_POSTS_LIST)
     .then(res => res.json())
     .then((data) => {
       this.setState({ citytube_videos: data })
