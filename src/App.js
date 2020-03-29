@@ -1,5 +1,6 @@
 import React, {Component} from 'react';
-import CitytubeVideos from './components/citytube_videos';
+import VideoList from './components/video_list';
+
 const CITYTUBE_VIDEO_POSTS_LIST = process.env.REACT_APP_CITYTUBE_VIDEO_POSTS_LIST;
 
 class App extends Component {
@@ -19,7 +20,7 @@ class App extends Component {
 
   render() {
     return (
-        <CitytubeVideos citytube_videos={this.state.citytube_videos} />
+        <VideoList citytube_videos={this.state.citytube_videos} />
     );
   }
 
