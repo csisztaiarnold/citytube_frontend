@@ -1,13 +1,21 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import App from './App';
 import * as serviceWorker from './serviceWorker';
+import VideoList from './components/VideoList';
+import Video from "./components/Video";
 
 ReactDOM.render(
   <React.StrictMode>
-    <App />
+    <VideoList />
   </React.StrictMode>,
   document.getElementById('root')
+);
+
+ReactDOM.render(
+    <React.StrictMode>
+        <Video />
+    </React.StrictMode>,
+    document.getElementById('video')
 );
 
 // If you want your app to work offline and load faster, you can change
