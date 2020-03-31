@@ -5,12 +5,11 @@ class Video extends Component {
     state = {
         video: [],
         show: false,
-        poop: 'test'
     }
 
     render() {
         const video = this.state.video ? (
-            <div>{ this.state.poop }</div>
+            <div>test</div>
         ) : (
             <div />
         )
@@ -23,4 +22,4 @@ class Video extends Component {
     }
 }
 
-export default Video
+export default Video;

@@ -3,6 +3,7 @@ import ReactDOM from 'react-dom';
 import * as serviceWorker from './serviceWorker';
 import VideoList from './components/VideoList';
 import Video from "./components/Video";
+import Contact from "./components/Contact";
 
 ReactDOM.render(
   <React.StrictMode>
@@ -16,6 +17,13 @@ ReactDOM.render(
         <Video />
     </React.StrictMode>,
     document.getElementById('video')
+);
+
+ReactDOM.render(
+    <React.StrictMode>
+        <Contact />
+    </React.StrictMode>,
+    document.getElementById('contact')
 );
 
 // If you want your app to work offline and load faster, you can change
