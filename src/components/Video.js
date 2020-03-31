@@ -1,4 +1,4 @@
-import React, {Component} from 'react'
+import React, {Component} from 'react';
 
 class Video extends Component {
 
@@ -11,11 +11,11 @@ class Video extends Component {
         const video = this.state.video ? (
             <div>test</div>
         ) : (
-            <div />
+            <div/>
         )
 
         return (
-            <div>
+            <div className="video">
                 {video}
             </div>
         )

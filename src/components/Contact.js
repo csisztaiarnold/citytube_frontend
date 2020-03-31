@@ -12,7 +12,7 @@ class Contact extends Component {
 
     render() {
         return (
-            <div>
+            <div className="contact">
                 <form onSubmit={this.handleSubmit}>
                     <input type="text" placeholder="Your name" />
                     <textarea></textarea>
