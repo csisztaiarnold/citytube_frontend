@@ -3,7 +3,7 @@ import React from "react";
 const CityMenu = ({cities}) => {
     const cityList = cities.data.map(city => {
         return (
-            <li>{city.attributes.name}</li>
+            <li key={city.attributes.name}>{city.attributes.name}</li>
         )
     });
     return (

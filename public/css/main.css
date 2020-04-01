@@ -6,6 +6,10 @@ body {
   margin: 0;
 }
 
+.hidden {
+  display: none;
+}
+
 header#head {
   background-color: #222;
 }
@@ -104,6 +108,8 @@ article.video-item .content .channel {
 }
 article.video-item .content .city {
   left: 0;
+  color: #fdc93a;
+  cursor: pointer;
 }
 
 .video-node h1 {

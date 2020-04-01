@@ -13,7 +13,7 @@ class App extends Component {
         citytube_videos: [],
         cities: [],
         loading_done: false
-    }
+    };
 
     componentDidMount() {
         Promise.all([fetch(CITYTUBE_VIDEO_POSTS_LIST), fetch(CITYTUBE_CITY_LIST)])
@@ -34,7 +34,7 @@ class App extends Component {
                 <div>
                     <CityMenu cities={this.state.cities}></CityMenu>
                     <MainMenu></MainMenu>
-                    <Videos videos={this.state.citytube_videos}></Videos>
+                    <Videos videos={this.state.citytube_videos} cities={this.state.cities}></Videos>
                     <Contact></Contact>
                 </div>
             ) : (

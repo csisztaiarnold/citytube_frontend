@@ -1,10 +1,11 @@
 import React from "react";
+import Helper, {convertCityIdToCityName} from "./Helpers";
 
 const handleVideoTitleClick = (e) => {
     console.log('Video title clicked.');
 };
 
-const Videos = ({videos}) => {
+const Videos = ({videos, cities}) => {
     const videoList = videos.data.map(video => {
         return (
             <article className="col-lg-4 col-md-6 video-item" key={video.attributes.drupal_internal__nid}>
@@ -28,7 +29,7 @@ const Videos = ({videos}) => {
                            title={video.attributes.field_channel}>{video.attributes.field_channel}</a>
                     </div>
                     <div className="city">
-                        <a href="#">city</a>
+                        <div dangerouslySetInnerHTML={{__html: convertCityIdToCityName(cities,video.relationships.field_city.data.id)}} />
                     </div>
                     <div className="description"
                          dangerouslySetInnerHTML={{__html: video.attributes.body && video.attributes.body.value}}/>
