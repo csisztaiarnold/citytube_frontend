@@ -5,20 +5,19 @@ const handleVideoTitleClick = (e) => {
 };
 
 const Videos = ({videos}) => {
-    const videoList = videos.map(video => {
+    const videoList = videos.data.map(video => {
         return (
-            <article className="col-lg-4 col-md-6 video-item" key={video.nid[0].value}
-                     video-title={video.title[0].value} channel={video.field_channel[0].value}>
-                <header style={{backgroundImage: "url(" + video.field_thumbnail_url[0].value + ")"}}>
+            <article className="col-lg-4 col-md-6 video-item" key={video.attributes.drupal_internal__nid}>
+                <header style={{backgroundImage: "url(" + video.attributes.field_thumbnail_url + ")"}}>
                     <div className="date">
-                        {(video.field_published[0].value).split('T')[0].split('-')[0].slice(-2)}<br/>
-                        {(video.field_published[0].value).split('T')[0].split('-')[1]}<br/>
-                        {(video.field_published[0].value).split('T')[0].split('-')[2]}
+                        {(video.attributes.field_published).split('T')[0].split('-')[0].slice(-2)}<br/>
+                        {(video.attributes.field_published).split('T')[0].split('-')[1]}<br/>
+                        {(video.attributes.field_published).split('T')[0].split('-')[2]}
                     </div>
                     <div className="header-item-top"/>
                     <div className="header-item">
                         <h1 onClick={handleVideoTitleClick}>
-                            {video.title[0].value}
+                            {video.attributes.title}
                         </h1>
                     </div>
                     <div className="header-item-bottom"/>
@@ -26,13 +25,13 @@ const Videos = ({videos}) => {
                 <div className="content">
                     <div className="channel">
                         <a href="#"
-                           title={video.field_channel[0].value}>{video.field_channel[0].value}</a>
+                           title={video.attributes.field_channel}>{video.attributes.field_channel}</a>
                     </div>
                     <div className="city">
-                        <a href="#">{video.field_city[0].target_id}</a>
+                        <a href="#">city</a>
                     </div>
                     <div className="description"
-                         dangerouslySetInnerHTML={{__html: video.body[0] && video.body[0].value}}/>
+                         dangerouslySetInnerHTML={{__html: video.attributes.body && video.attributes.body.value}}/>
                 </div>
             </article>
         )
