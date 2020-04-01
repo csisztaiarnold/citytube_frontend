@@ -7,9 +7,7 @@
  */
 export function convertCityIdToCityName(cities, city_id) {
     const cityName = cities.data.map(city => {
-        if (city.id === city_id) {
-            return city.attributes.name;
-        }
+        return city.id === city_id ? city.attributes.name : null;
     }).join('');
     return cityName;
 }

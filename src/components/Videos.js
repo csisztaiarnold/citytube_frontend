@@ -1,5 +1,5 @@
 import React from "react";
-import Helper, {convertCityIdToCityName} from "./Helpers";
+import {convertCityIdToCityName} from "./Helpers";
 
 const handleVideoTitleClick = (e) => {
     console.log('Video title clicked.');
