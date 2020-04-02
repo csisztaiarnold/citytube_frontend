@@ -14,8 +14,10 @@ class Contact extends Component {
         return (
             <div className="contact">
                 <form onSubmit={this.handleSubmit}>
-                    <input type="text" placeholder="Your name" />
-                    <textarea></textarea>
+                    <label htmlFor="name">Name:</label>
+                    <input id="name" type="text" placeholder="Your name" />
+                    <label htmlFor="message">Message:</label>
+                    <textarea id="message"></textarea>
                     <button>Submit</button>
                 </form>
             </div>
