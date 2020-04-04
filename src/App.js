@@ -38,7 +38,8 @@ class App extends Component {
                 <div>
                     <CityMenu cities={this.state.cities}></CityMenu>
                     <MainMenu></MainMenu>
-                    <Videos videos={this.state.citytube_videos} cities={this.state.cities} showVideo={this.showVideo}></Videos>
+                    <Videos videos={this.state.citytube_videos} cities={this.state.cities}
+                            showVideo={this.showVideo}></Videos>
                     <Contact></Contact>
                 </div>
             ) : (
