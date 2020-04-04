@@ -26,7 +26,11 @@ class App extends Component {
                 loading_done: true
             }))
             .catch(console.log);
-    }
+    };
+
+    showVideo = (video) => {
+        console.log('Show video');
+    };
 
     render() {
         return (
@@ -34,7 +38,7 @@ class App extends Component {
                 <div>
                     <CityMenu cities={this.state.cities}></CityMenu>
                     <MainMenu></MainMenu>
-                    <Videos videos={this.state.citytube_videos} cities={this.state.cities}></Videos>
+                    <Videos videos={this.state.citytube_videos} cities={this.state.cities} showVideo={this.showVideo}></Videos>
                     <Contact></Contact>
                 </div>
             ) : (
