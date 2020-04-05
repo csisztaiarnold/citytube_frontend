@@ -3,6 +3,7 @@ import Contact from "./components/Contact";
 import MainMenu from "./components/MainMenu";
 import Videos from "./components/Videos";
 import CityMenu from "./components/CityMenu";
+import Video from "./components/Video";
 
 const CITYTUBE_VIDEO_POSTS_LIST = process.env.REACT_APP_CITYTUBE_VIDEO_POSTS_LIST;
 const CITYTUBE_CITY_LIST = process.env.REACT_APP_CITYTUBE_CITY_LIST;
@@ -12,6 +13,7 @@ class App extends Component {
     state = {
         citytube_videos: [],
         cities: [],
+        video: [],
         loading_done: false
     };
 
@@ -29,7 +31,7 @@ class App extends Component {
     };
 
     showVideo = (video) => {
-        console.log('Show video');
+        console.log(video);
     };
 
     render() {
@@ -41,6 +43,7 @@ class App extends Component {
                     <Videos videos={this.state.citytube_videos} cities={this.state.cities}
                             showVideo={this.showVideo}></Videos>
                     <Contact></Contact>
+                    <Video video={this.state.video}></Video>
                 </div>
             ) : (
                 <div>Loading</div>
