@@ -7,6 +7,7 @@ import Video from "./components/Video";
 
 const CITYTUBE_VIDEO_POSTS_LIST = process.env.REACT_APP_CITYTUBE_VIDEO_POSTS_LIST;
 const CITYTUBE_CITY_LIST = process.env.REACT_APP_CITYTUBE_CITY_LIST;
+const CITYTUBE_VIDEO = process.env.REACT_APP_CITYTUBE_VIDEO;
 
 class App extends Component {
 
