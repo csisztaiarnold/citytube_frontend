@@ -4,7 +4,7 @@ import {convertCityIdToCityName} from "./Helpers";
 class Videos extends Component {
 
     handleVideoTitleClick = (e) => {
-        this.props.showVideo('data');
+        this.props.showVideo('5beb5416-2036-494d-aa94-bfc267846ce1');
     };
 
     render() {

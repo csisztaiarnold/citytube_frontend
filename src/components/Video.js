@@ -5,18 +5,19 @@ class Video extends Component {
     state = {
         video: [],
         show: false,
-    }
+    };
 
     render() {
-        const video = this.state.video ? (
+
+        const video_container = this.state.video ? (
             <div>test</div>
         ) : (
             <div/>
-        )
+        );
 
         return (
             <div className="video">
-                {video}
+                {video_container}
             </div>
         )
     }

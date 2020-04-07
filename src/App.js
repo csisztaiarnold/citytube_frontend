@@ -14,8 +14,8 @@ class App extends Component {
     state = {
         citytube_videos: [],
         cities: [],
-        video: [],
-        loading_done: false
+        video_node: [],
+        list_loading_done: false,
     };
 
     componentDidMount() {
@@ -26,25 +26,30 @@ class App extends Component {
             .then(([data1, data2]) => this.setState({
                 citytube_videos: data1,
                 cities: data2,
-                loading_done: true
+                list_loading_done: true
             }))
             .catch(console.log);
     };
 
-    showVideo = (video) => {
-        console.log(video);
+    showVideo = (video_id) => {
+        fetch(CITYTUBE_VIDEO + '/5beb5416-2036-494d-aa94-bfc267846ce1')
+            .then(res => res.json())
+            .then((data) =>
+                this.setState({video_node: data})
+            )
+            .catch(console.log);
     };
 
     render() {
         return (
-            this.state.loading_done ? (
+            this.state.list_loading_done ? (
                 <div>
                     <CityMenu cities={this.state.cities}></CityMenu>
                     <MainMenu></MainMenu>
                     <Videos videos={this.state.citytube_videos} cities={this.state.cities}
                             showVideo={this.showVideo}></Videos>
                     <Contact></Contact>
-                    <Video video={this.state.video}></Video>
+                    <Video video={this.state.video_node}></Video>
                 </div>
             ) : (
                 <div>Loading</div>
