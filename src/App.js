@@ -32,7 +32,7 @@ class App extends Component {
     };
 
     showVideo = (video_id) => {
-        fetch(CITYTUBE_VIDEO + '/5beb5416-2036-494d-aa94-bfc267846ce1')
+        fetch(CITYTUBE_VIDEO + '/' + video_id)
             .then(res => res.json())
             .then((data) =>
                 this.setState({video_node: data})

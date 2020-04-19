@@ -4,7 +4,7 @@ import {convertCityIdToCityName} from "./Helpers";
 class Videos extends Component {
 
     handleVideoTitleClick = (e) => {
-        this.props.showVideo('5beb5416-2036-494d-aa94-bfc267846ce1');
+        this.props.showVideo(e.target.id);
     };
 
     render() {
@@ -19,7 +19,7 @@ class Videos extends Component {
                         </div>
                         <div className="header-item-top"/>
                         <div className="header-item">
-                            <h1 onClick={this.handleVideoTitleClick}>
+                            <h1 onClick={this.handleVideoTitleClick} id={video.id}>
                                 {video.attributes.title}
                             </h1>
                         </div>
