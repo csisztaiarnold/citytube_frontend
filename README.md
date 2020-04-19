@@ -10,7 +10,7 @@ Install and enable the [CityTube Drupal 8 module](https://github.com/csisztaiarn
 
 Import a few videos.
 
-Install and enable the JSON:API module (comes with the core).
+Install the JSON:API and CORS modules for enabling cross-origin resource sharing. Both come with Drupal core.
 
 Create an `.env.local` from `.env.local.example` and set the environment variables (the API endpoints).
 
